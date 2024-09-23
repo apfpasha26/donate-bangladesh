@@ -1,3 +1,5 @@
+// js for scrolling effect 
+
 const header = document.getElementById('header');
 const navbar = document.getElementById('navbar')
 window.addEventListener('scroll', function(){
@@ -8,3 +10,11 @@ window.addEventListener('scroll', function(){
         header.classList.remove('header-scrolled')
     }
 })
+
+// event for Blog file 
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = '/blog.html'
+})
+
+// event for home file 
+
