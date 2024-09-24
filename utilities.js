@@ -3,7 +3,7 @@
 function toggleSections(id){
     document.getElementById('donate-section').classList.add('hidden');
     document.getElementById('history-section').classList.add('hidden');
-
+    
     document.getElementById(id).classList.remove('hidden');
 }
 
@@ -16,16 +16,7 @@ function changeButtonBg(id){
     document.getElementById(id).classList.remove('bg-[#B4F461]');
 }
 
-// input field data 
 
-// function inputFieldValueNumber(id){
-//     const mainBalance = parseFloat(document.getElementById('main-balance').innerText)
-//     const inputValue = document.getElementById(id).value;
-//     const inputValueNumber = parseFloat(inputValue);
-    
-//     return inputValueNumber;
-
-// }
 
 function inputFieldValueNumber(id) {
     const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
