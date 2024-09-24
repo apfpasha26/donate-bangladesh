@@ -18,9 +18,36 @@ function changeButtonBg(id){
 
 // input field data 
 
-function inputFieldValueNumber(id){
-    const inputValue = document.getElementById(id).value;
-    const inputValueNumber = parseFloat(inputValue)
+// function inputFieldValueNumber(id){
+//     const mainBalance = parseFloat(document.getElementById('main-balance').innerText)
+//     const inputValue = document.getElementById(id).value;
+//     const inputValueNumber = parseFloat(inputValue);
+    
+//     return inputValueNumber;
 
-    return inputValueNumber
+// }
+
+function inputFieldValueNumber(id) {
+    const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
+    const inputValue = document.getElementById(id).value;
+    const inputValueNumber = parseFloat(inputValue);
+
+    // Check if inputValueNumber is not a number or is a negative number
+    if (isNaN(inputValueNumber) || inputValueNumber < 0 || inputValueNumber > mainBalance) {
+        alert('Invalid Input. Please enter a valid number.');
+        document.getElementById('modal').classList.add('hidden');
+        return 0;
+    }
+
+    return inputValueNumber;
+}
+
+
+// balance section data 
+
+function balanceValueNumber(id){
+    const balanceText = document.getElementById(id).innerText;
+    const balanceTextNumber = parseFloat(balanceText);
+
+    return balanceTextNumber;
 }
